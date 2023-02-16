@@ -1,4 +1,4 @@
-SELECT wallet_table.address
+SELECT DISTINCT wallet_table.address
 FROM (
     SELECT b.address,
         SUM(
@@ -12,12 +12,25 @@ FROM (
     GROUP BY b.address) wallet_table 
 INNER JOIN trades t 
     ON wallet_table.address = t.address
-WHERE t.block_height > 730000;
-
+WHERE t.address IN (
+    SELECT t2.address
+    FROM trades t2
+    WHERE t2.block_height > 730000
+);
 
 
 
 /*
+SELECT * 
+FROM trades t 
+WHERE t.address IN (
+    SELECT t2.address
+    FROM trades t2
+    WHERE t2.block_height > 730000
+);
+
+
+
 CREATE TABLE balances (
     id int,
     address text,
