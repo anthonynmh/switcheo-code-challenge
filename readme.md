@@ -1,9 +1,6 @@
-# Switcheo Code Challenge #1 #
+# Switcheo Code Challenge #1 Attempt#
 
-Note that if you fork this repository, your responses may be publicly linked to this repo.  
-Please submit your application along with the solutions attached or linked.   
-
-It is important that you minimally attempt the problems, even if you do not arrive at a working solution.
+My attempt at the Switcheo Code Challenge #1.
 
 ## Submission ##
 You can either provide a link to an online repository, attach the solution in your application, or whichever method you prefer.
